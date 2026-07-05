@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Colorful Snake Game 🐍✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <!-- Header Game -->
+        <header class="game-header">
+            <h1>🌈 FUNKY SNAKE</h1>
+            <p>Gunakan tombol **Panah (Arrow Keys)** atau **WASD** untuk bergerak!</p>
+        </header>
+
+        <!-- Papan Skor -->
+        <div class="score-board">
+            <div class="score-card score">
+                <span class="label">Skor</span>
+                <span class="value" id="current-score">0</span>
+            </div>
+            <div class="score-card high-score">
+                <span class="label">Skor Tertinggi</span>
+                <span class="value" id="high-score">0</span>
+            </div>
+        </div>
+
+        <!-- Area Canvas Game -->
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <!-- Tombol Kontrol -->
+        <div class="control-box">
+            <button id="btn-restart" class="btn-colorful">Mulai Game 🎮</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
