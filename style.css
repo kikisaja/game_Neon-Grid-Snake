@@ -1,0 +1,129 @@
+:root {
+    --bg-bright: #f0f4f8;       /* Latar belakang luar abu-abu sangat muda/cerah */
+    --panel-bg: #ffffff;        /* Panel utama putih bersih */
+    --text-dark: #1e293b;       /* Teks utama gelap/tegas */
+    --candy-pink: #ff477e;
+    --candy-cyan: #00f0ff;
+    --candy-yellow: #ffb703;
+    --candy-green: #06d6a0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-bright);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    background-color: var(--panel-bg);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border: 3px solid var(--text-dark); /* Gaya Pop Art Populer */
+    text-align: center;
+    max-width: 460px;
+    width: 100%;
+}
+
+.game-header h1 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--candy-pink);
+    margin-bottom: 5px;
+}
+
+.game-header p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Tampilan Papan Skor Berwarna */
+.score-board {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.score-card {
+    flex: 1;
+    padding: 12px;
+    border-radius: 14px;
+    border: 2px solid var(--text-dark);
+}
+
+.score-card.score { background-color: #e8f5e9; }
+.score-card.high-score { background-color: #fff3e0; }
+
+.score-card .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #475569;
+    text-transform: uppercase;
+    key-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.score-card .value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+/* Pembungkus Layar Canvas */
+.canvas-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2px;
+    border: 3px solid var(--text-dark);
+    box-shadow: 5px 5px 0px var(--text-dark); /* Bayangan Pop Art solid */
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#gameCanvas {
+    background-color: #fafafa; /* Background canvas cerah pastel */
+    border-radius: 12px;
+    display: block;
+}
+
+/* Tombol Kontrol Colorful Pop */
+.btn-colorful {
+    background: var(--candy-yellow);
+    color: var(--text-dark);
+    border: 3px solid var(--text-dark);
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--text-dark);
+    transition: all 0.1s ease;
+}
+
+.btn-colorful:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--text-dark);
+}
+
+.btn-colorful:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--text-dark);
+}
